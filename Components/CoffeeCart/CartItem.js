@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 // NativeBase Components
 import { Text, Left, Body, Right, Button, ListItem, Icon } from "native-base";
+import CartStore from "../../store/cartStore";
 
 class CartItem extends Component {
   render() {
@@ -18,7 +19,7 @@ class CartItem extends Component {
           <Text style={{ color: "white" }}>{item.quantity}</Text>
         </Body>
         <Right>
-          <Button transparent>
+          <Button transparent onPress={() => CartStore.removeItemToCart(item)}>
             <Icon name="trash" style={{ color: "white", fontSize: 21 }} />
           </Button>
         </Right>
