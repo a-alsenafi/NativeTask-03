@@ -40,6 +40,7 @@ class CoffeeDetail extends Component {
         onPress={() => navigation.navigate("CoffeeCart")}
       >
         <Text>
+          {cartStore.numberOfItems}
           <Icon
             type="FontAwesome"
             name="coffee"
